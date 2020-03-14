@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width: 400px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <p>
+<img id="img1" src="1_anh_1.jpg" onclick="part1()"/><br/>
+<img id="img2" src="2_anh_2.jpg" onclick="part2()"/><br/>
+<img id="img3" src="1_anh_3.jpg" onclick="part3()"/><br/>
+<img id="img4" src="1_anh_4.jpg" onclick="part4()"/><br/>
+<img id="img5" src="2_anh_5.jpg" onclick="part5()"/><br/>
+    </p>
+    <button onclick="ketqua()">Xem ket qua</button>
+    <p id="result"> </p>
+</form>
+<script>
+let x1= 1;
+let x2= 1;
+let x3= 1;
+let x4= 1;
+let x5= 1;
+let img1= document.getElementById("img1");
+let img2= document.getElementById("img2");
+let img3= document.getElementById("img3");
+let img4= document.getElementById("img4");
+
+function part1() {
+
+if (x1===1){
+    x1= 2;
+    img1.src= x1+ "_anh_1.jpg";
+    console.log(x1);
+}else {
+ x1= 1;
+ img1.src= x1+ "_anh_1.jpg";console.log(x1);
+}
+}
+function part2() {
+
+    if (x2===1){
+        x2= 2;
+        img2.src= x2+ "_anh_2.jpg";
+    }else {
+        x2= 1;
+        img2.src= x2+ "_anh_2.jpg";
+    }console.log(x2);
+}
+function part3() {
+
+    if (x3===1){
+        x3= 2;
+        img3.src= x3+ "_anh_3.jpg";
+    }else {
+        x3= 1;
+        img3.src= x3+ "_anh_3.jpg";
+    }console.log(x3);
+}
+function part4() {
+
+    if (x4===1){
+        x4= 2;
+        img4.src= x4+ "_anh_4.jpg";
+    }else {
+        x4= 1;
+        img4.src= x4+ "_anh_4.jpg";
+    }console.log(x4);
+}
+function part5() {
+
+    if (x5===1){
+        x5= 2;
+        img5.src= x5+ "_anh_5.jpg";
+    }else {
+        x5= 1;
+        img5.src= x5+ "_anh_5.jpg";
+    }console.log(x5);
+}
+function ketqua() {
+    let tong= x1 +x2 + x3 + x4+ x5;
+    console.log(tong);
+   if (tong===5 || tong===10) {
+        document.getElementById("result").innerText = ("ban da thang");
+    } else {
+        document.getElementById("result").innerText = ("Ban da thua");
+    }
+}
+
+</script>
+</body>
+</html>
